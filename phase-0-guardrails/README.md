@@ -17,14 +17,26 @@ On Microsoft Learn, work through the AZ-104 governance modules covering:
 
 Skills outline: https://learn.microsoft.com/certifications/resources/study-guides/az-104
 
-## 2. Prerequisites
-```bash
-az login
-az account list -o table
-az account set --subscription "<your-subscription-name-or-id>"
-az bicep install && az bicep version
-```
-Edit `main.bicepparam` and set your `owner` and `alertEmail`.
+## 2. Setup (Azure Cloud Shell, Bash)
+1. In the Azure portal, click **`>_`** in the top bar, then choose **Bash**.
+2. On the first launch, choose **No storage account required**, pick your subscription, and click **Apply**.
+   The session is *ephemeral*: files are wiped when you close it, so re-clone each session.
+3. Register the resource providers this lab needs. Each Azure service has to be registered on a subscription before you can use it, and that's an exam topic:
+   ```bash
+   for p in Microsoft.CloudShell Microsoft.PolicyInsights Microsoft.Consumption Microsoft.CostManagement Microsoft.Management; do
+     az provider register --namespace $p
+   done
+   az provider show -n Microsoft.PolicyInsights --query registrationState -o tsv   # wait for "Registered"
+   ```
+4. Get the lab and set your alert email (only in your local copy, so your email never goes into the public repo):
+   ```bash
+   git clone https://github.com/dcavanagh95/azure-lab.git
+   cd azure-lab/phase-0-guardrails
+   sed -i "s/you@example.com/<your-email>/" main.bicepparam
+   grep alertEmail main.bicepparam      # check it changed
+   ```
+
+Running locally instead? Run `az login`, then `az bicep install`, then follow step 4.
 
 ## 3. Management groups (CLI, manual)
 These are created at tenant scope, so do them by hand to see how the hierarchy works.
@@ -41,6 +53,8 @@ cd phase-0-guardrails
 chmod +x deploy.sh teardown.sh
 ./deploy.sh
 ```
+You should see **6 to create**: 1 resource group, 1 lock, 1 budget and 3 policy assignments. Type **y** at the prompt. Just pressing Enter counts as "no".
+
 `what-if` runs first and shows exactly what will change. Read the output before you type `y`. It's the same habit the exam tests for ARM/Bicep.
 
 ## 5. Explore in the portal (≈20 min)
