@@ -18,7 +18,6 @@ Everything is deployed with Azure CLI and Bicep, with PowerShell scripts for day
 | 3 | `phase-3-compute` | Compute: VMs, VMSS + load balancer, App Service, containers | 20–25% | ⏳ |
 | 4 | `phase-4-storage` | Storage: blob tiers, lifecycle, SAS, private endpoints, Azure Files | 15–20% | ⏳ |
 | 5 | `phase-5-monitoring` | Monitor & maintain: Log Analytics, KQL, alerts, backup, Network Watcher | 10–15% | ⏳ |
-
 | — | [`scripts`](scripts) | PowerShell admin scripts: inventory, tag compliance, VM start/stop | all | ✅ Ready |
 
 Exam skills outline (as of 17 April 2026): https://learn.microsoft.com/certifications/resources/study-guides/az-104
