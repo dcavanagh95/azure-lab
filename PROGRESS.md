@@ -14,3 +14,12 @@
    You don't need to redeploy: Phase 0 is still live in Azure.
 2. Break-it #2: `az group create -n rg-test -l westus --tags env=lab`
 3. Finish break-it #3–6 from the Phase 0 README, then start Phase 1 (identity and RBAC)
+
+## 20 Oct 2026
+**Done**
+- Added PowerShell admin scripts in `scripts/` (inventory, tag compliance, VM start/stop)
+
+**Next time, start here**
+1. Break-it #2 to #6 (Phase 0), in Cloud Shell **Bash**
+2. Switch Cloud Shell to **PowerShell**, then run `./Get-LabInventory.ps1` and `./Test-TagCompliance.ps1` from `scripts/`
+3. Start Phase 1 (identity and RBAC)

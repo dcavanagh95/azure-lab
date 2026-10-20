@@ -1,7 +1,7 @@
 # azure-lab
 
 A hands-on Azure lab that grows phase by phase while studying for **AZ-104: Microsoft Azure Administrator**.
-Everything is deployed with Azure CLI and Bicep, so any phase can be torn down and rebuilt in minutes.
+Everything is deployed with Azure CLI and Bicep, with PowerShell scripts for day-to-day admin, so any phase can be torn down and rebuilt in minutes.
 
 ## Study loop (every session)
 1. **Learn**: do the Microsoft Learn module for the topic.
@@ -19,6 +19,8 @@ Everything is deployed with Azure CLI and Bicep, so any phase can be torn down a
 | 4 | `phase-4-storage` | Storage: blob tiers, lifecycle, SAS, private endpoints, Azure Files | 15–20% | ⏳ |
 | 5 | `phase-5-monitoring` | Monitor & maintain: Log Analytics, KQL, alerts, backup, Network Watcher | 10–15% | ⏳ |
 
+| — | [`scripts`](scripts) | PowerShell admin scripts: inventory, tag compliance, VM start/stop | all | ✅ Ready |
+
 Exam skills outline (as of 17 April 2026): https://learn.microsoft.com/certifications/resources/study-guides/az-104
 
 ## Conventions
@@ -29,6 +31,7 @@ Exam skills outline (as of 17 April 2026): https://learn.microsoft.com/certifica
 ## Requirements
 - Azure subscription
 - Azure CLI with Bicep (`az bicep install`)
+- Az PowerShell module, for `scripts/` (preinstalled in Cloud Shell)
 - bash (macOS, Linux, WSL or Cloud Shell)
 
 ## Cost safety
