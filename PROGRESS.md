@@ -23,3 +23,11 @@
 1. Break-it #2 to #6 (Phase 0), in Cloud Shell **Bash**
 2. Switch Cloud Shell to **PowerShell**, then run `./Get-LabInventory.ps1` and `./Test-TagCompliance.ps1` from `scripts/`
 3. Start Phase 1 (identity and RBAC)
+
+## 21 Oct 2026
+**Done**
+- Phase 0 break-it #2 to #6 complete. **Phase 0 finished** (see `phase-0-guardrails/notes.md`)
+
+**Next time, start here**
+1. Cloud Shell **PowerShell**: clone the repo, `cd azure-lab/scripts`, run `./Get-LabInventory.ps1` and `./Test-TagCompliance.ps1`
+2. Start Phase 1 (identity and RBAC)
