@@ -30,5 +30,9 @@
 
 - Ran the PowerShell scripts against the lab: found, fixed and re-checked a non-compliant resource group (see `scripts/notes.md`)
 
+- Phase 1 (identity and RBAC) built and pushed, ready to deploy
+
 **Next time, start here**
-1. Start Phase 1 (identity and RBAC)
+1. Do the Learn modules for Phase 1 (Entra ID users/groups, Azure RBAC)
+2. Cloud Shell **Bash**: clone the repo, `cd azure-lab/phase-1-identity`, `chmod +x *.sh`, run `./create-identities.sh` (write down the passwords), then `./deploy.sh`
+3. Break-it #1–6 from the Phase 1 README

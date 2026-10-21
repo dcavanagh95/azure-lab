@@ -13,7 +13,7 @@ Everything is deployed with Azure CLI and Bicep, with PowerShell scripts for day
 | Phase | Folder | Exam domain | Weight | Status |
 |---|---|---|---|---|
 | 0 | [`phase-0-guardrails`](phase-0-guardrails) | Identities & governance: policy, locks, tags, budgets, management groups | 20–25% | ✅ Complete |
-| 1 | `phase-1-identity` | Identities & governance: Entra users/groups, guests, RBAC, SSPR | | ⏳ |
+| 1 | [`phase-1-identity`](phase-1-identity) | Identities & governance: Entra users/groups, guests, RBAC, custom roles, SSPR | 20–25% | ✅ Ready to deploy |
 | 2 | `phase-2-networking` | Virtual networking: hub-spoke, peering, NSG/ASG, UDR, DNS, Bastion | 15–20% | ⏳ |
 | 3 | `phase-3-compute` | Compute: VMs, VMSS + load balancer, App Service, containers | 20–25% | ⏳ |
 | 4 | `phase-4-storage` | Storage: blob tiers, lifecycle, SAS, private endpoints, Azure Files | 15–20% | ⏳ |
