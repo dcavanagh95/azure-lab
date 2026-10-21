@@ -28,6 +28,7 @@
 **Done**
 - Phase 0 break-it #2 to #6 complete. **Phase 0 finished** (see `phase-0-guardrails/notes.md`)
 
+- Ran the PowerShell scripts against the lab: found, fixed and re-checked a non-compliant resource group (see `scripts/notes.md`)
+
 **Next time, start here**
-1. Cloud Shell **PowerShell**: clone the repo, `cd azure-lab/scripts`, run `./Get-LabInventory.ps1` and `./Test-TagCompliance.ps1`
-2. Start Phase 1 (identity and RBAC)
+1. Start Phase 1 (identity and RBAC)
